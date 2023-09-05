@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { createNewBoard, getAllBoard } from "../../redux/authSlice"
 import "./AllBoard.css"
+import { FaTrash } from "react-icons/fa";
+
 
 const AllBoard = () => {
   
@@ -34,6 +36,7 @@ const AllBoard = () => {
     setNewBoardName('')
   }
 
+
   // Rendered JSX
   return ( 
     <>
@@ -58,7 +61,7 @@ const AllBoard = () => {
           onClick={createBoard}
           className="create_btn"
           style={{
-            backgroundColor: "purple",
+            backgroundColor: "blue",
             width: "200px",
             marginLeft: "50px",
             borderRadius: "7px",
@@ -88,8 +91,28 @@ const AllBoard = () => {
                   }}
                 >
                   {item.name}
+                  
                 </button>
+               
               </Link>
+              {/* <span style={{
+                    color:"red",
+                    backgroundColor:"white",
+                    padding:"14px",
+                    fontSize:"18px",
+                    marginLeft:"10px",
+                    borderRadius:"22px",
+                  }}
+                 onClick={() => {
+                    dispatch(deleteBoard(item._id))
+                 }} 
+                  >
+                <FaTrash/>
+              </span> */}
+              <span>
+                {/* update icon */}
+                    
+              </span>
             </li>
           ))}
         </div>

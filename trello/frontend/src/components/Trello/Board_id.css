@@ -1,3 +1,13 @@
 body{
-    background-color: rgb(146, 116, 224) !important;
+    background-color: rgb(197, 128, 25) !important;
+}
+.task{
+    border: 2px solid black;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0px;
+    width: auto;
+    margin-top: 5px;
+    font-size: 16px;
 }
